@@ -1,0 +1,211 @@
+:root {
+  --fs-body: 1rem;
+  --fs-bold: ;
+  --primary-color: #001f7d;
+  --secondary-color: #bfcfff;
+  --fw-bold: 700;
+  --fw-regular: 400;
+  --fw-light: 300;
+  --fs-regular: 1rem;
+  --fs-small: 0.8rem;
+  --fs-large: 1.5rem;
+
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--fs-regular);
+  max-width: 1440px;
+  min-width: 500px;
+  padding: 20px;
+  margin: 0 auto 0 auto;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* DEFAULT CLASES */
+.font-bold {
+  font-weight: var(--fw-bold);
+}
+
+.font-light {
+  font-weight: var(--fw-light);
+}
+
+.font-size-small {
+  font-size: var(--fs-small);
+}
+
+.font-size-large {
+  font-size: var(--fs-large);
+}
+
+
+/* WEB PAGE STYLEING STARTS HERE */
+
+
+.section-title {
+  font-size: 2rem;
+}
+
+/* HEADER */
+.self-introduction {
+  display: grid;
+  gap: 0.5rem;
+  grid-auto-flow: column;
+  /*
+  grid-template-columns: min-content 1fr;
+  text-align: right; 
+  */
+  margin-bottom: 50px;
+}
+
+.personal-info {
+  /* Centers vertically all the text on the header */
+  margin: auto 0 auto 0;
+  font-size: 20px;
+}
+
+.your-name {
+  margin: 0;
+  font-size: 6.25rem;
+  /* Add this to the neme on the header */
+  color: var(--primary-color);
+  line-height: 100%;
+}
+
+#div-image img {
+  min-width: 447px;
+}
+
+
+
+/* EXPERIENCE & EDUCATION*/
+.professional-experience-unit,
+.education-unit {
+  /* This is to create and set up the grid for an individual job experience*/
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: min-content 1fr;
+  margin: 0.5em 0 3em 0;
+}
+
+.professional-experience-company-logo,
+.education-center-logo {
+  width: 75px;
+  min-width: 75px;
+}
+
+#professional-experience-skills {
+  gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.professional-experience-unit ul {
+  list-style-position: inside;
+}
+
+#professional-experience-skills li {
+  display: inline;
+  min-width: min-content;
+  padding: 0.25em .65em 0.25em 0.65em;
+  border-radius: 25px;
+  font-weight: var(--fw-bold);
+
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+
+  /* Alternative colors */
+  /* border: 2px solid gray; */
+}
+
+/* FOOTER*/
+footer {
+  padding-bottom: 15px;
+}
+
+@media (max-width: 1000px) {
+
+  /* Place the name beneath the profile picture */
+  .self-introduction {
+    display: block;
+  }
+
+
+  #hello {
+    display: none;
+  }
+
+  .professional-experience-job-description,
+  #professional-experience-skills,
+  .education-unit-description {
+    grid-column: 1 / 3;
+  }
+
+  .self-introduction #div-image img {
+    margin: 0 auto 0 auto;
+  }
+}
