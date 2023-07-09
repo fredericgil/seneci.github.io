@@ -2,7 +2,7 @@
   --fs-body: 1rem;
   --fs-bold: ;
   --primary-color: #001f7d;
-  --secondary-color: #bfcfff;
+  --secondary-color: #f2f6ff;
   --fw-bold: 700;
   --fw-regular: 400;
   --fw-light: 300;
@@ -107,6 +107,13 @@ svg {
 
 .section-title {
   font-size: 2rem;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.section-title span {
+  font-size: 2.5rem;
 }
 
 /* HEADER */
@@ -176,6 +183,7 @@ svg {
   font-weight: var(--fw-bold);
 
   background-color: var(--secondary-color);
+  border: 1px solid #63666a;
   color: var(--primary-color);
 
   /* Alternative colors */
