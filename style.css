@@ -142,8 +142,28 @@ svg {
   line-height: 100%;
 }
 
+.profile-text {
+  margin-bottom: 15px;
+}
+
+.social {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.social img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
 #div-image img {
   min-width: 447px;
+}
+
+.social-unit {
+  display: flex;
+  margin: 0 10px 0 10px;
 }
 
 
